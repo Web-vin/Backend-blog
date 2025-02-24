@@ -6,6 +6,11 @@ const cors = require("cors")
 
 // Middleware to parse JSON requests
 app.use(express.json());
+app.use(cors({
+   origin: ["http://localhost:3000", "https://blog-app-woad-iota.vercel.app/"], 
+   methods: "GET,POST,PUT,DELETE",
+   credentials: true
+}));
 
 app.use(cors()); 
 app.use(cors({
